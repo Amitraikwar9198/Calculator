@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header">
+    <div>
+      <span class="menu-btn" onclick="toggleOverlay()">☰</span>
+      <p>Calculator</p>
+    </div>
+   
+  </div>
+  <div class="memory-history">
+    <span>History</span>
+    
+  </div>
+  <div class="history-panel history-panel-desktop" id="historyPanelDesktop">
+    <p id="historyContent">There's no history yet.</p>
+  </div>
+  <div class="fullscreen-overlay" id="fullscreenOverlay" onclick="toggleOverlay()">
+    <div class="history-panel" onclick="event.stopPropagation()">
+      <p id="historyContentMobile">There's no history yet.</p>
+    </div>
+  </div>
+  <div class="display" id="display">0</div>
+  <div class="buttons">
+    <button onclick="clearEntry()">CE</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="deleteChar()">⌫</button>
+    <button onclick="appendOperator('/')">÷</button>
+
+    <button onclick="appendFunction('%')">%</button>
+    <button onclick="appendFunction('1/')">⅟x</button>
+    <button onclick="appendFunction('**2')">x²</button>
+    <button onclick="appendFunction('Math.sqrt(')">√</button>
+
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <button onclick="appendOperator('*')">×</button>
+
+    <button onclick="appendNumber('4')">4</button>
+    <button onclick="appendNumber('5')">5</button>
+    <button onclick="appendNumber('6')">6</button>
+    <button onclick="appendOperator('-')">−</button>
+
+    <button onclick="appendNumber('1')">1</button>
+    <button onclick="appendNumber('2')">2</button>
+    <button onclick="appendNumber('3')">3</button>
+    <button onclick="appendOperator('+')">+</button>
+
+    <button onclick="toggleSign()">+∕−</button>
+    <button onclick="appendNumber('0')">0</button>
+    <button onclick="appendDot()">.</button>
+    <button class="equal" onclick="calculate()">=</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
