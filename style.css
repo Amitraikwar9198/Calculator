@@ -45,7 +45,7 @@
     }
     .memory-history {
       display: flex;
-      justify-content: flex-end;
+      
       padding: 10px;
     }
     .memory-history span {
